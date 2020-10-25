@@ -7,7 +7,7 @@ df1 <- read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactors = F)
 head(df1,5)
 #create linear regression
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = df1)
-#summary of linear regressionee
+#summary of linear regression 
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = df1))
 
 
