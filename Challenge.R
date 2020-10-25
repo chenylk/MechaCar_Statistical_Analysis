@@ -33,3 +33,4 @@ lot_3 <- df2 %>% filter(Manufacturing_Lot == 'Lot3')
 shapiro.test(lot_1$PSI) #not normal distribution
 shapiro.test(lot_2$PSI) #normal distribution
 shapiro.test(lot_3$PSI) #normal distribution 
+shapiro.test(df2$PSI)
