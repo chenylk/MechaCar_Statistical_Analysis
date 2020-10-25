@@ -13,8 +13,7 @@ lot_summary <- df2 %>% group_by(Manufacturing_Lot) %>% summarise(mean=mean(PSI),
 
 
 #Challenge 3
-t.test(x=df2$PSI,mu=1500)
-t.test(subset(x=df2$PSI,mu=1500,df2$Manufacturing_Lot=='Lot1'))
-t.test(subset(x=df2$PSI,mu=1500,df2$Manufacturing_Lot=='Lot2'))
-t.test(subset(x=df2$PSI,mu=1500,df2$Manufacturing_Lot=='Lot3'))
-
+t.test(x=log10(df2$PSI),mu=log10(1500))
+t.test((subset(x=log10(df2$PSI),df2$Manufacturing_Lot=='Lot1')),mu=log10(1500))
+t.test((subset(x=log10(df2$PSI),df2$Manufacturing_Lot=='Lot2')),mu=log10(1500))
+t.test((subset(x=log10(df2$PSI),df2$Manufacturing_Lot=='Lot3')),mu=log10(1500))
